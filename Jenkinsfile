@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Maven'){
             steps{
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
         stage('Build docker image'){
