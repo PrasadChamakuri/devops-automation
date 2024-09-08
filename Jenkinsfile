@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent { 
+    label 'linux'
+}
         tools{
         maven 'Maven'
     }
@@ -11,7 +13,7 @@ pipeline {
         }
         stage('Build Maven'){
             steps{
-               bat 'mvn clean package'
+               sh 'mvn clean package'
             }
         }
         stage('Build docker image'){
