@@ -3,7 +3,7 @@ pipeline {
     label 'linux'
 }
         tools{
-        maven 'Maven'
+        maven 'maven'
     }
     stages{
         stage('git'){
