@@ -4,7 +4,6 @@ pipeline {
         stage('git'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/PrasadChamakuri/devops-automation']]])
-                sh 'mvn clean install'
             }
         }
         stage('Build Maven'){
